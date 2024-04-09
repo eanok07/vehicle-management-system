@@ -1,0 +1,156 @@
+-- phpMyAdmin SQL Dump
+-- version 2.10.1
+-- http://www.phpmyadmin.net
+-- 
+-- Host: localhost
+-- Generation Time: Apr 06, 2023 at 06:45 AM
+-- Server version: 5.0.45
+-- PHP Version: 5.2.5
+-- 
+-- dfdfg
+-- 
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+-- 
+-- Database: `mechdb`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `tb_employee`
+-- 
+
+CREATE TABLE `tb_employee` (
+  `id` int(11) NOT NULL,
+  `ename` varchar(1000) NOT NULL,
+  `gender` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `phone` varchar(100) NOT NULL,
+  `dob` varchar(100) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `age` varchar(100) NOT NULL,
+  `mobile` varchar(100) NOT NULL,
+  `pass` varchar(100) NOT NULL,
+  `im` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table `tb_employee`
+-- 
+
+INSERT INTO `tb_employee` (`id`, `ename`, `gender`, `email`, `phone`, `dob`, `address`, `age`, `mobile`, `pass`, `im`) VALUES 
+(1, 'ragu', 'Male', 'ragu@gmail.com', '54654654', '2022-02-07', 'gdfg', '67', '6456437565', '123', '11.jpg'),
+(2, 'Vinoth', 'Male', 'vino@gmail.com', '4986498974', '2022-02-09', '85,Anna nagar\r\nSrirangam', '25', '0431-545454', '123', 'aaaaa.jpg'),
+(3, 'aaaaa', 'Female', 'aaa', 'aaa', '2023-04-05', 'sasd', '43', 'sdasd', '123', 'Bike-Loans-in-India1.jpg'),
+(3, 'aaaaa', 'Female', 'aaa', 'aaa', '2023-04-05', 'sasd', '43', 'sdasd', '123', 'Bike-Loans-in-India1.jpg'),
+(4, 'karthick', 'Male', 'kathick@gmail.com', '9862356858', '1995-04-05', 'junction', '25', '9856235689', '123', '13.jpg');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `tb_feed`
+-- 
+
+CREATE TABLE `tb_feed` (
+  `uname` varchar(100) NOT NULL,
+  `phone` varchar(100) NOT NULL,
+  `feed` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table `tb_feed`
+-- 
+
+INSERT INTO `tb_feed` (`uname`, `phone`, `feed`) VALUES 
+('reva', '456456', 'dfdsfg'),
+('raja', '9856235689', 'nice work'),
+('mathi', '9848484848', 'website is nice');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `tb_post`
+-- 
+
+CREATE TABLE `tb_post` (
+  `id` int(11) NOT NULL,
+  `mech` varchar(100) NOT NULL,
+  `st` varchar(100) NOT NULL,
+  `uname` varchar(100) NOT NULL,
+  `phone` varchar(100) NOT NULL,
+  `post` varchar(1000) NOT NULL,
+  `status` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table `tb_post`
+-- 
+
+INSERT INTO `tb_post` (`id`, `mech`, `st`, `uname`, `phone`, `post`, `status`) VALUES 
+(1, 'ragu', 'bike', 'reva', '5465465', 'dfdsf', 'Accept'),
+(2, 'ragu', '<--------select------->', 'raja', '784512457', 'bike is punger', 'Accept'),
+(3, 'Vinoth', 'car', 'raja', '7845454', 'car wheel problem', 'Accept'),
+(4, '<--------select------->', '<--------select------->', 'vinoth', '07845124578', 'dfsafd', 'waiting'),
+(5, 'ragu', 'bike', 'rose', '07845214571', 'fgfhg', 'waiting'),
+(5, 'ragu', 'bike', 'rose', '07845214571', 'fgfhg', 'waiting'),
+(6, 'ragu', 'bike', 'rose', '07845214571', 'sdsad', 'waiting'),
+(7, 'ragu', 'bike', 'rose', '07845214571', 'sdasd', 'Accept'),
+(7, 'ragu', 'bike', 'rose', '07845214571', 'sdasd', 'Accept'),
+(0, '', '', '', '', '', 'waiting'),
+(8, 'aaaaa', 'bike', 'd', '767', 'fgfg', 'Accept'),
+(9, 'ragu', '<--------select------->', 'vinoth', '07845124578', 'my bike is puncher not started', 'Accept'),
+(10, 'ragu', '<--------select------->', 'mathi', '78487474747', 'bike is not started', 'Accept'),
+(11, 'karthick', 'bike', 'Rajesh', '09856235689', 'bike is not started', 'waiting'),
+(12, 'karthick', '<--------select------->', 'mathi', '8878787878', 'problem', 'Accept');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `tb_reg`
+-- 
+
+CREATE TABLE `tb_reg` (
+  `ename` varchar(100) NOT NULL,
+  `adds` varchar(100) NOT NULL,
+  `city` varchar(100) NOT NULL,
+  `phone` varchar(100) NOT NULL,
+  `uname` varchar(100) NOT NULL,
+  `pass` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table `tb_reg`
+-- 
+
+INSERT INTO `tb_reg` (`ename`, `adds`, `city`, `phone`, `uname`, `pass`) VALUES 
+('Revathy', 'Trichy', 'Trichy', '45345', 'reva', '123'),
+('Revathy', 'Trichy', 'Trichy', '45345', 'reva', '123'),
+('Revathy', 'Trichy', 'Trichy', '45345', 'reva', '123'),
+('raja', 'Anna Nagar', 'Trichy', '9856235625', 'raja', '123'),
+('chitra', '12,Anna Nagar', 'Trichy', '07845214571', 'chitra', '123'),
+('dsdsg', 'dfgdfg', 'Trichy', 'dfgdfg', 'd', 'd'),
+('dsdsg', 'dfgdfg', 'Trichy', 'dfgdfg', 'd', 'd'),
+('mathi', '12,Anna Nagar', 'Trichy', '98562359787', 'mathi', '123');
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `tb_vehicle`
+-- 
+
+CREATE TABLE `tb_vehicle` (
+  `id` int(11) NOT NULL,
+  `veg` varchar(100) NOT NULL,
+  `img` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table `tb_vehicle`
+-- 
+
+INSERT INTO `tb_vehicle` (`id`, `veg`, `img`) VALUES 
+(2, 'bike', 'bike.jpg'),
+(3, 'car', '12.jpg'),
+(4, 'Auto', '12.png');
